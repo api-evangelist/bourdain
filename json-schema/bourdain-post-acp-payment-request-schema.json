@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bourdain/main/json-schema/bourdain-post-acp-payment-request-schema.json",
+  "title": "PostAcpPaymentRequest",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpPaymentRequest",
+  "type": "object",
+  "properties": {
+    "checkout_session_id": {
+      "type": "string",
+      "description": "Session ID from checkout"
+    },
+    "payment_method": {
+      "type": "string",
+      "description": "wallet, stripe, or split"
+    },
+    "stripe_payment_method_id": {
+      "type": "string",
+      "description": "Required for stripe or split"
+    }
+  },
+  "required": [
+    "checkout_session_id",
+    "payment_method"
+  ]
+}

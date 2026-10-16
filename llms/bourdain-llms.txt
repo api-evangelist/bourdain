@@ -1,0 +1,76 @@
+# Bourdain - AI-Native Trading Card Marketplace
+
+> Bourdain is the UK's first AI-native marketplace for buying, selling, and trading Pokemon and One Piece Trading Card Game (TCG) cards.
+
+## About Us
+
+Bourdain was built specifically for trading card collectors and traders in the United Kingdom. We combine artificial intelligence with marketplace technology to make listing, pricing, and selling cards faster and easier than ever before.
+
+## Supported Games
+
+- **Pokemon TCG** - All sets from Base Set to current releases, English and Japanese
+- **One Piece Card Game** - Full support for OPTCG cards
+
+## Key Features
+
+### AI-Powered Listing
+- Snap a photo of any trading card
+- AI automatically identifies the card, set, and condition
+- Get instant pricing suggestions based on recent sales and market data
+- List a card in 10 seconds, or bulk list 10 cards in 30 seconds
+
+### Secure Marketplace
+- Payments processed securely via Stripe
+- Buyer protection on all purchases
+- Seller verification system
+- Escrow-style payment holding until delivery confirmed
+
+### Trading & Deals
+- Make and receive trade offers
+- Bundle multiple cards together
+- Negotiate prices with sellers
+- Counter-offer system for fair deals
+
+### Integrated Shipping
+- SendCloud integration for label generation
+- Real-time tracking on all orders
+- Multiple carrier options
+- Free shipping available on select items
+
+## Main Pages
+
+- `/` - Homepage with featured listings and marketplace overview
+- `/browse` - Browse all trading cards for sale with filters
+- `/sell` - List your cards using AI-assisted selling
+- `/bundles` - Card bundles and lots for bulk purchases
+- `/pricing` - Transparent fee structure
+- `/help` - Help center with FAQs and support
+
+## Categories
+
+- Raw Cards (ungraded singles)
+- Graded Cards (PSA, CGC, BGS certified)
+- Sealed Products
+- Bundles & Lots
+- Japanese Cards
+- Vintage Cards
+
+## For Developers
+
+- API documentation: /docs/mcp
+- Structured data: Schema.org Product, Organization, WebSite schemas
+- Full sitemap: /sitemap.xml
+
+## Contact
+
+- Website: https://bourdain.io
+- Help Center: https://bourdain.io/help
+- Terms of Service: https://bourdain.io/terms
+- Privacy Policy: https://bourdain.io/privacy
+
+## Business Information
+
+- Location: United Kingdom
+- Currency: GBP (British Pounds)
+- Language: English
+- Target Market: UK trading card collectors and traders (Pokemon, One Piece, and more)

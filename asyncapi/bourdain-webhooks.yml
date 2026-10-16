@@ -1,0 +1,36 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.bourdain.io/docs/webhooks
+sources:
+- https://www.bourdain.io/docs/webhooks
+description: Real-time event notifications for your integration.
+events:
+- event: order.created
+  description: New order placed.
+- event: order.shipped
+  description: Seller marked order as shipped.
+- event: order.delivered
+  description: Order marked as delivered.
+- event: order.cancelled
+  description: Order cancelled.
+- event: payment.succeeded
+  description: Payment completed successfully.
+- event: payment.failed
+  description: Payment attempt failed.
+- event: refund.created
+  description: Refund initiated.
+- event: payout.completed
+  description: Seller payout sent.
+- event: dispute.opened
+  description: Buyer opened a dispute.
+- event: dispute.resolved
+  description: Dispute resolved.
+- event: dispute.escalated
+  description: Dispute escalated to support.
+delivery:
+  signature: HMAC-SHA256
+  retries: exponential backoff
+  content_type: application/json
+note: 'Every webhook includes a signature header for verification. Header name: x-bourdain-signature.'
+docs: https://www.bourdain.io/docs/webhooks

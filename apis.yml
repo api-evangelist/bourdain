@@ -1,23 +1,125 @@
 aid: bourdain
+
 name: Bourdain
-description: 'Bourdain is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://bourdain.io/og-image.png
+
+description: Bourdain operates an agentic trading card marketplace that enables users to browse, buy, sell, and price trading cards such as Pokémon
+  and One Piece. The platform offers AI‑driven search and filtering, seller analytics, and a roadmap for future features. It provides a modern
+  web interface with pricing, terms, privacy, and support pages, aiming to bring confidence to card collectors and traders.
+
 url: https://raw.githubusercontent.com/api-evangelist/bourdain/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-16 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-16'
+
 modified: '2026-10-16'
+
 tags:
 - Company
-apis: []
+- Marketplace
+- Trading Cards
+- AI
+- E-commerce
+- Collectibles
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: RateLimits
+  url: rate-limits/bourdain-rate-limits.yml
+- type: Spectral
+  url: rules/bourdain-rules.yml
+- type: JSONLD
+  url: json-ld/bourdain-context.jsonld
+- type: Vocabulary
+  url: vocabulary/bourdain-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/bourdain-webhooks.yml
+- type: DataModel
+  url: data-model/bourdain-data-model.yml
+- type: Authentication
+  url: authentication/bourdain-authentication.yml
+- type: Conformance
+  url: conformance/bourdain-conformance.yml
+- type: LLMsTxt
+  url: llms/bourdain-llms.txt
+- type: Hosts
+  url: hosts/bourdain-hosts.yml
+- type: Vendors
+  url: vendors/bourdain-vendors.yml
+- type: DomainSecurity
+  url: security/bourdain-domain-security.yml
 - type: Website
   url: https://bourdain.io/
+- type: Documentation
+  url: https://www.bourdain.io/docs
+- type: APIReference
+  url: https://www.bourdain.io/docs/api
+- type: GettingStarted
+  url: https://www.bourdain.io/docs/getting-started
+- type: Support
+  url: https://www.bourdain.io/help
+- type: Blog
+  url: https://www.bourdain.io/blog
+- type: Pricing
+  url: https://www.bourdain.io/pricing
+- type: TermsOfService
+  url: https://www.bourdain.io/terms
+- type: PrivacyPolicy
+  url: https://www.bourdain.io/privacy
+- type: Roadmap
+  url: https://www.bourdain.io/roadmap
+- type: StatusPage
+  url: https://www.bourdain.io/status
+
+apis:
+- aid: bourdain:bourdain-api
+  name: Bourdain API
+  description: 'Bourdain API as documented publicly: 6 operations. Contract generated from the documentation by API Evangelist (2026-10-16); not
+    the provider''s own document.'
+  humanURL: https://www.bourdain.io/docs/api
+  baseURL: https://bourdain.io
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bourdain-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: API documentation is HTML with no machine‑readable OpenAPI/GraphQL/AsyncAPI spec available.
+  evidence:
+  - url: https://www.bourdain.io/docs/api
+    status: 200
+  checked: '2026-10-16'
+x-enrichment:
+  date: '2026-10-16'
+  status: enriched
+  artifacts_added: 22
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,62 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.bourdain.io/docs/rate-limits
+sources:
+- https://www.bourdain.io/docs/rate-limits
+- https://www.bourdain.io/docs/getting-started
+name: Bourdain rate limits
+limits:
+- name: GET /acp-products
+  limit_text: 100 requests 1 minute
+  max: 100
+  window: 1 minute
+  endpoint: GET /acp-products
+- name: GET /acp-product/:id
+  limit_text: 200 requests 1 minute
+  max: 200
+  window: 1 minute
+  endpoint: GET /acp-product/:id
+- name: POST /acp-checkout
+  limit_text: 30 requests 1 minute
+  max: 30
+  window: 1 minute
+  endpoint: POST /acp-checkout
+- name: POST /acp-payment
+  limit_text: 30 requests 1 minute
+  max: 30
+  window: 1 minute
+  endpoint: POST /acp-payment
+- name: POST /acp-confirm
+  limit_text: 30 requests 1 minute
+  max: 30
+  window: 1 minute
+  endpoint: POST /acp-confirm
+- name: POST /mcp-server
+  limit_text: 60 requests 1 minute
+  max: 60
+  window: 1 minute
+  endpoint: POST /mcp-server
+- name: ACP Products (search)
+  limit_text: 100/min
+  max: 100
+  window: minute
+- name: ACP Checkout
+  limit_text: 20/min
+  max: 20
+  window: minute
+- name: ACP Payment
+  limit_text: 10/min
+  max: 10
+  window: minute
+- name: MCP (all tools)
+  limit_text: 60/min
+  max: 60
+  window: minute
+headers:
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+- Retry-After
+exhaustion_status: 429
+docs: https://www.bourdain.io/docs/rate-limits

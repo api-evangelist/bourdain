@@ -1,0 +1,55 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/bourdain-openapi-generated.yml
+vocabulary:
+  name: Bourdain Domain Vocabulary
+  description: 'Terms declared by Bourdain''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-16'
+  terms:
+  - term: PostAcpCheckoutRequest
+    definition: 'Object declared by the contract with fields: listing_id, shipping_address, buyer_email.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpCheckoutRequest
+  - term: PostAcpCheckoutResponse
+    definition: 'Object declared by the contract with fields: success, checkout_session_id, payment_options.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpCheckoutResponse
+  - term: PostAcpConfirmRequest
+    definition: 'Object declared by the contract with fields: order_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpConfirmRequest
+  - term: PostAcpConfirmResponse
+    definition: 'Object declared by the contract with fields: success, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpConfirmResponse
+  - term: PostAcpPaymentRequest
+    definition: 'Object declared by the contract with fields: checkout_session_id, payment_method, stripe_payment_method_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpPaymentRequest
+  - term: PostAcpPaymentResponse
+    definition: 'Object declared by the contract with fields: success, order_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpPaymentResponse
+  - term: GetAcpProductIdResponse
+    definition: 'Object declared by the contract with fields: success, product.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/GetAcpProductIdResponse
+  - term: GetAcpProductsResponse
+    definition: 'Object declared by the contract with fields: success, products, total_count, page, has_more.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/GetAcpProductsResponse
+  - term: PostMcpServerRequest
+    definition: 'Object declared by the contract with fields: jsonrpc, id, method, params.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostMcpServerRequest

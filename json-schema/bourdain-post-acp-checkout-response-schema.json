@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bourdain/main/json-schema/bourdain-post-acp-checkout-response-schema.json",
+  "title": "PostAcpCheckoutResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/PostAcpCheckoutResponse",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "checkout_session_id": {
+      "type": "string"
+    },
+    "payment_options": {
+      "type": "array"
+    }
+  }
+}

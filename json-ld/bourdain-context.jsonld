@@ -1,0 +1,98 @@
+{
+  "@context": {
+    "@vocab": "https://bourdain.io/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "bourdain": "https://bourdain.io/schema#",
+    "PostAcpCheckoutRequest": "bourdain:PostAcpCheckoutRequest",
+    "listing_id": {
+      "@id": "bourdain:listing_id",
+      "@type": "xsd:string"
+    },
+    "shipping_address": {
+      "@id": "bourdain:shipping_address"
+    },
+    "buyer_email": {
+      "@id": "bourdain:buyer_email",
+      "@type": "xsd:string"
+    },
+    "PostAcpCheckoutResponse": "bourdain:PostAcpCheckoutResponse",
+    "success": {
+      "@id": "bourdain:success",
+      "@type": "xsd:boolean"
+    },
+    "checkout_session_id": {
+      "@id": "bourdain:checkout_session_id",
+      "@type": "xsd:string"
+    },
+    "payment_options": {
+      "@id": "bourdain:payment_options",
+      "@container": "@list"
+    },
+    "PostAcpConfirmRequest": "bourdain:PostAcpConfirmRequest",
+    "order_id": {
+      "@id": "bourdain:order_id",
+      "@type": "xsd:string"
+    },
+    "PostAcpConfirmResponse": "bourdain:PostAcpConfirmResponse",
+    "status": {
+      "@id": "bourdain:status",
+      "@type": "xsd:string"
+    },
+    "PostAcpPaymentRequest": "bourdain:PostAcpPaymentRequest",
+    "payment_method": {
+      "@id": "bourdain:payment_method",
+      "@type": "xsd:string"
+    },
+    "stripe_payment_method_id": {
+      "@id": "bourdain:stripe_payment_method_id",
+      "@type": "xsd:string"
+    },
+    "PostAcpPaymentResponse": "bourdain:PostAcpPaymentResponse",
+    "GetAcpProductIdResponse": "bourdain:GetAcpProductIdResponse",
+    "product": {
+      "@id": "bourdain:product"
+    },
+    "GetAcpProductsResponse": "bourdain:GetAcpProductsResponse",
+    "products": {
+      "@id": "bourdain:products",
+      "@container": "@list"
+    },
+    "total_count": {
+      "@id": "bourdain:total_count",
+      "@type": "xsd:integer"
+    },
+    "page": {
+      "@id": "bourdain:page",
+      "@type": "xsd:integer"
+    },
+    "has_more": {
+      "@id": "bourdain:has_more",
+      "@type": "xsd:boolean"
+    },
+    "PostMcpServerRequest": "bourdain:PostMcpServerRequest",
+    "jsonrpc": {
+      "@id": "bourdain:jsonrpc",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "bourdain:id",
+      "@type": "xsd:string"
+    },
+    "method": {
+      "@id": "bourdain:method",
+      "@type": "xsd:string"
+    },
+    "params": {
+      "@id": "bourdain:params"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Bourdain API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Bourdain's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-16) from openapi/_ae-authored/bourdain-openapi-generated.yml.",
+  "dcterms:created": "2026-10-16",
+  "dcterms:source": [
+    "openapi/_ae-authored/bourdain-openapi-generated.yml"
+  ]
+}

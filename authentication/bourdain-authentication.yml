@@ -1,0 +1,24 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.bourdain.io/docs/authentication
+sources:
+- https://www.bourdain.io/docs/authentication
+- https://www.bourdain.io/docs/getting-started
+- https://www.bourdain.io/docs/quickstart
+- https://www.bourdain.io/seller/onboarding
+description: Bourdain uses API keys passed as a Bearer token in the Authorization header.
+schemes:
+- type: apiKey
+  name: Authorization
+  evidence: All API requests must include an Authorization header with your API key as a Bearer token.
+  location: header
+  header: Authorization
+  scopes:
+  - acp_read
+  - acp_purchase
+  - mcp_tools
+  - webhooks
+  how_to_obtain: Generate API keys from your account settings (Settings → API Keys).
+note: No OAuth2, HTTP Basic, JWT, HMAC, MTLS, or other authentication schemes are documented.
+docs: https://www.bourdain.io/docs/authentication

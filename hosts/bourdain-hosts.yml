@@ -1,0 +1,60 @@
+generated: '2026-10-16'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - docs
+  - website
+hosts:
+- host: api.bourdain.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bourdain.io
+  role: api
+  relation: own
+- host: bourdain.io
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - api
+  - hosting
+  vendor: vercel
+  registrable_domain: bourdain.io
+  role: website
+  relation: own
+- host: www.bourdain.io
+  found_by:
+  - pointer
+  - apis[]
+  - docs-index
+  types:
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Support
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  - Roadmap
+  - StatusPage
+  serves:
+  - docs
+  registrable_domain: bourdain.io
+  role: docs
+  relation: own

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bourdain/main/json-schema/bourdain-get-acp-products-response-schema.json",
+  "title": "GetAcpProductsResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bourdain-openapi-generated.yml#/components/schemas/GetAcpProductsResponse",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "products": {
+      "type": "array",
+      "description": "List of product objects"
+    },
+    "total_count": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "has_more": {
+      "type": "boolean"
+    }
+  }
+}

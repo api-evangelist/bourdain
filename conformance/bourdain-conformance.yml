@@ -1,0 +1,27 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.bourdain.io/privacy
+sources:
+- https://www.bourdain.io/privacy
+- https://www.bourdain.io/docs/authentication
+standards:
+- id: gdpr
+  conforms: true
+  evidence: 'If you are located in the European Economic Area (EEA), you have additional rights under GDPR:'
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: Authorization (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+- id: pagination
+  conforms: true
+  evidence: list operations take limit, page
+docs: https://www.bourdain.io/privacy

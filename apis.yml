@@ -86,16 +86,15 @@ common:
   url: https://www.bourdain.io/status
 
 apis:
-- aid: bourdain:bourdain-api
-  name: Bourdain API
-  description: 'Bourdain API as documented publicly: 6 operations. Contract generated from the documentation by API Evangelist (2026-10-16); not
-    the provider''s own document.'
+- aid: bourdain:bourdain-acp-checkout-api
+  name: Bourdain Acp Checkout API
+  description: The Acp Checkout API from Bourdain — 1 operation(s) for acp checkout.
   humanURL: https://www.bourdain.io/docs/api
-  baseURL: https://bourdain.io
+  tags:
+  - Acp Checkout
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bourdain-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/bourdain-acp-checkout-api-openapi.yml
   - type: JSONSchema
     url: json-schema/bourdain-post-mcp-server-request-schema.json
   - type: JSONSchema
@@ -108,7 +107,111 @@ apis:
     url: json-schema/bourdain-post-acp-checkout-response-schema.json
   - type: JSONSchema
     url: json-schema/bourdain-get-acp-product-id-response-schema.json
-
+- aid: bourdain:bourdain-acp-confirm-api
+  name: Bourdain Acp Confirm API
+  description: The Acp Confirm API from Bourdain — 1 operation(s) for acp confirm.
+  humanURL: https://www.bourdain.io/docs/api
+  tags:
+  - Acp Confirm
+  properties:
+  - type: OpenAPI
+    url: openapi/bourdain-acp-confirm-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
+- aid: bourdain:bourdain-acp-payment-api
+  name: Bourdain Acp Payment API
+  description: The Acp Payment API from Bourdain — 1 operation(s) for acp payment.
+  humanURL: https://www.bourdain.io/docs/api
+  tags:
+  - Acp Payment
+  properties:
+  - type: OpenAPI
+    url: openapi/bourdain-acp-payment-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
+- aid: bourdain:bourdain-acp-product-api
+  name: Bourdain Acp Product API
+  description: The Acp Product API from Bourdain — 1 operation(s) for acp product.
+  humanURL: https://www.bourdain.io/docs/api
+  tags:
+  - Acp Product
+  properties:
+  - type: OpenAPI
+    url: openapi/bourdain-acp-product-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
+- aid: bourdain:bourdain-acp-products-api
+  name: Bourdain Acp Products API
+  description: The Acp Products API from Bourdain — 1 operation(s) for acp products.
+  humanURL: https://www.bourdain.io/docs/api
+  tags:
+  - Acp Products
+  properties:
+  - type: OpenAPI
+    url: openapi/bourdain-acp-products-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
+- aid: bourdain:bourdain-mcp-server-api
+  name: Bourdain Mcp Server API
+  description: The Mcp Server API from Bourdain — 1 operation(s) for mcp server.
+  humanURL: https://www.bourdain.io/docs/api
+  tags:
+  - Mcp Server
+  properties:
+  - type: OpenAPI
+    url: openapi/bourdain-mcp-server-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bourdain-post-mcp-server-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-payment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-request-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-products-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-post-acp-checkout-response-schema.json
+  - type: JSONSchema
+    url: json-schema/bourdain-get-acp-product-id-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

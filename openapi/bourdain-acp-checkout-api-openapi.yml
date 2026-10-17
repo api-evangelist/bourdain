@@ -1,0 +1,85 @@
+openapi: 3.2.0
+info:
+  title: Bourdain Acp Checkout API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 6 operation(s) read from 7 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Bourdain has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 6
+    pages-with-code: 6
+    pages-read: 7
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.bourdain.io/docs/api
+  - https://www.bourdain.io/docs/mcp
+  - https://www.bourdain.io/docs/examples
+  - https://www.bourdain.io/docs/playground
+  - https://www.bourdain.io/docs/authentication
+  - https://www.bourdain.io/docs/getting-started
+  - https://www.bourdain.io/docs/rate-limits
+servers:
+- url: https://bourdain.io
+security:
+- Authorization: []
+tags:
+- name: Acp Checkout
+paths:
+  /acp-checkout:
+    post:
+      operationId: post_acp_checkout
+      tags:
+      - Acp Checkout
+      summary: Initiate purchase flow
+      x-source: https://www.bourdain.io/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAcpCheckoutRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAcpCheckoutResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostAcpCheckoutRequest:
+      type: object
+      properties:
+        listing_id:
+          type: string
+          description: Listing to purchase
+        shipping_address:
+          type: object
+          description: Delivery address
+        buyer_email:
+          type: string
+          description: Email for order confirmation
+      required:
+      - listing_id
+      - shipping_address
+    PostAcpCheckoutResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        checkout_session_id:
+          type: string
+        payment_options:
+          type: array
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-source: https://www.bourdain.io/docs/authentication

@@ -27,6 +27,13 @@ tags:
 - Company
 - Marketplace
 - Trading Cards
+- Artificial Intelligence
+- E-Commerce
+- Collectibles
+tags_raw:
+- Company
+- Marketplace
+- Trading Cards
 - AI
 - E-commerce
 - Collectibles
@@ -196,6 +203,8 @@ apis:
   description: The Mcp Server API from Bourdain — 1 operation(s) for mcp server.
   humanURL: https://www.bourdain.io/docs/api
   tags:
+  - MCP Server
+  tags_raw:
   - Mcp Server
   properties:
   - type: OpenAPI
